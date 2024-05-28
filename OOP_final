@@ -1,0 +1,28 @@
+class Employee:
+    def __init__(self, name, hours_worked):
+        self.name = name
+        self.hours_worked = hours_worked
+
+    def calculate_overtime(self):
+        if self.hours_worked > 40:
+            overtime_hours = self.hours_worked - 40
+            return overtime_hours
+        else:
+            return 0
+
+    def display_info(self):
+        print(f"Name: {self.name}")
+        print(f"Hours Worked: {self.hours_worked}")
+        overtime_hours = self.calculate_overtime()
+        if overtime_hours > 0:
+            print(f"Overtime Hours: {overtime_hours}")
+        else:
+            print("No overtime hours")
+
+employee1 = Employee("Ali Raza Baloch", 45)
+employee1.display_info()
+
+employee2 = Employee("Zeeshan Baloch", 30)
+employee2.display_info()
+
+
